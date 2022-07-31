@@ -1,11 +1,6 @@
 import type {NextPage} from "next";
 import Head from "next/head";
-
-type TechnologyCardProps = {
-    name: string;
-    description: string;
-    documentation: string;
-};
+import FadeInSection from "../components/FadeInSection";
 
 const Home: NextPage = () => {
     return (
@@ -16,31 +11,56 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <main className="container mx-auto flex flex-col items-center justify-center h-56">
-                <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
-                    Ross&apos;s Portfolio
-                </h1>
+            <main>
+                <div className="container mx-auto flex flex-col items-center justify-center h-56">
+                    <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
+                        Ross&apos;s Home Page
+                    </h1>
+
+                </div>
+
+                <div className="container mr-auto flex flex-col items-center justify-center p-4 text-center">
+                    <h2 className="text-2xl">Who Am I?</h2>
+                    <div className="w-10/12">
+                        I am a software engineer/architect currently
+                        living in Tokyo Japan 🇯🇵 <br/>
+                        I like designing computer systems, and apparently
+                        got good enough that companies pay me to do it. <br/>
+                        Here you can see what I&apos;m working on 👀
+                    </div>
+                </div>
+
+                <FadeInSection>
+                    <div className="flex flex-col gap-3">
+                        <div className="text-5xl">
+                            Technologies
+                        </div>
+                        <div className="text-2xl">
+                            - Kubernetes
+                        </div>
+                        <div className="text-2xl">
+                            - SpringBoot
+                        </div>
+                    </div>
+                </FadeInSection>
+
+                <FadeInSection>
+                    <div className="text-5xl">
+                        Hello world
+                    </div>
+                </FadeInSection>
+
+                <div className="flex flex-col gap-2 mt-4">
+                    <div>Links</div>
+                    <div>Github, ect</div>
+                </div>
+
             </main>
+
+
         </>
     );
 };
 
-const TechnologyCard = ({name, description, documentation}: TechnologyCardProps) => {
-    return (
-        <section
-            className="flex flex-col justify-center p-6 duration-500 border-2 border-gray-500 rounded shadow-xl motion-safe:hover:scale-105">
-            <h2 className="text-lg text-gray-700">{name}</h2>
-            <p className="text-sm text-gray-600">{description}</p>
-            <a
-                className="mt-3 text-sm underline text-violet-500 decoration-dotted underline-offset-2"
-                href={documentation}
-                target="_blank"
-                rel="noreferrer"
-            >
-                Documentation
-            </a>
-        </section>
-    );
-};
 
 export default Home;
