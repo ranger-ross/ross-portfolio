@@ -1,6 +1,6 @@
 import React, {useRef} from "react";
 import {ScriptProps} from "next/dist/client/script";
-import {useOnScreen} from "../hooks/useOnScreen";
+import {useOnScreen} from "../../hooks/useOnScreen";
 
 const FadeInSection: React.FC<ScriptProps> = ({children}) => {
     const domRef = useRef<any>();
