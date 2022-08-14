@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
                 <div className="m-10">
                     <BasicCard>
-                        <div className="container flex flex-col items-center justify-center text-center">
+                        <div className="flex flex-col items-center justify-center text-center">
                             <h2 className="text-2xl">Who Am I?</h2>
 
                             <div className="w-10/12">
