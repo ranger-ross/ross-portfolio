@@ -4,6 +4,8 @@ import springBootLogo from "../../assets/logos/springboot-logo.png";
 import kubernetesLogo from "../../assets/logos/kubernetes-logo.png";
 import javaLogo from "../../assets/logos/java-logo.jpg";
 import gcpLogo from "../../assets/logos/gcp-logo.png";
+import reactLogo from "../../assets/logos/react-logo.png";
+import angularLogo from "../../assets/logos/angular-logo.png";
 
 type Technology = {
     name: string,
@@ -16,8 +18,8 @@ const technologies: Technology[] = [
     {name: 'SpringBoot', logo: springBootLogo, docs: 'https://spring.io/'},
     {name: 'Google Cloud Platform', logo: gcpLogo, docs: 'https://cloud.google.com/'},
     {name: 'Java', logo: javaLogo, docs: 'https://www.java.com/'},
-    {name: 'React'},
-    {name: 'Angular'},
+    {name: 'React', logo: reactLogo, docs: 'https://reactjs.org/'},
+    {name: 'Angular', logo: angularLogo, docs: 'https://angular.io/'},
 ];
 
 
