@@ -4,6 +4,7 @@ import BasicCard from "../components/basic/BasicCard";
 import TechnologiesSection from "../components/TechnologiesSection";
 import LinksSection from "../components/LinksSection";
 import TerminalText from "../components/basic/TerminalText";
+import Particles from "../components/particles/Particles";
 
 const Home: NextPage = () => {
     return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
             </Head>
 
             <main className="overflow-hidden">
+                <Particles/>
                 <div className="container mx-auto flex flex-col items-center justify-center text-center md:h-48">
                     <h1 className="
                     text-5xl md:text-[5rem] leading-normal font-extrabold
