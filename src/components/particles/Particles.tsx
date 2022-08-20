@@ -13,7 +13,7 @@ function createArray(count: number): number[] {
 const Particles = () => {
     return (
         <div>
-            {createArray(60).map((num) => (
+            {createArray(30).map((num) => (
                 <div key={num} className={styles.particle}></div>
             ))}
         </div>
