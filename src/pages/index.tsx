@@ -4,6 +4,7 @@ import FadeInSection from "../components/basic/FadeInSection";
 import BasicCard from "../components/basic/BasicCard";
 import TechnologiesSection from "../components/TechnologiesSection";
 import LinksSection from "../components/LinksSection";
+import TerminalText from "../components/basic/TerminalText";
 
 const Home: NextPage = () => {
     return (
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
                 <div className="m-10">
                     <BasicCard>
                         <div className="flex flex-col items-center justify-center text-center">
-                            <h2 className="text-2xl">Who Am I?</h2>
+                            <TerminalText>whoami</TerminalText>
 
                             <div className="w-10/12">
                                 I am a software engineer/architect currently

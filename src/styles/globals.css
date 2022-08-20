@@ -19,3 +19,21 @@ section {
     visibility: visible;
     display: flex;
 }
+
+.blinking-cursor {
+    width: 2px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    animation: blinking-cursor-animation 1.25s infinite;
+    opacity: 50%;
+}
+
+@keyframes blinking-cursor-animation {
+    from, to {
+        opacity: 100%
+    }
+    50% {
+        opacity: 0
+    }
+}
+
