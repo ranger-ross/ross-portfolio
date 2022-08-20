@@ -1,6 +1,5 @@
 import type {NextPage} from "next";
 import Head from "next/head";
-import FadeInSection from "../components/basic/FadeInSection";
 import BasicCard from "../components/basic/BasicCard";
 import TechnologiesSection from "../components/TechnologiesSection";
 import LinksSection from "../components/LinksSection";
@@ -29,7 +28,7 @@ const Home: NextPage = () => {
                 <LinksSection/>
 
                 <div className="mt-10 sm:m-10">
-                    <BasicCard>
+                    <BasicCard growOnHover={false}>
                         <div className="flex flex-col items-center justify-center text-center">
                             <TerminalText>whoami</TerminalText>
 
@@ -45,9 +44,7 @@ const Home: NextPage = () => {
                 </div>
 
 
-                <FadeInSection>
-                    <TechnologiesSection/>
-                </FadeInSection>
+                <TechnologiesSection/>
 
             </main>
 
