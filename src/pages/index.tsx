@@ -16,8 +16,12 @@ const Home: NextPage = () => {
             </Head>
 
             <main>
-                <div className="container mx-auto flex flex-col items-center justify-center h-48">
-                    <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
+                <div className="container mx-auto flex flex-col items-center justify-center text-center md:h-48">
+                    <h1 className="
+                    text-5xl md:text-[5rem] leading-normal font-extrabold
+                    text-transparent text-8xl bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-500
+                    "
+                    >
                         Ross&apos;s Home Page
                     </h1>
                 </div>
@@ -29,7 +33,7 @@ const Home: NextPage = () => {
                         <div className="flex flex-col items-center justify-center text-center">
                             <TerminalText>whoami</TerminalText>
 
-                            <div className="w-10/12">
+                            <div className="w-10/12 text-white mt-3">
                                 I am a software engineer/architect currently
                                 living in <div className="inline-block">Tokyo, Japan 🇯🇵 </div><br/>
                                 I like designing computer systems, and apparently

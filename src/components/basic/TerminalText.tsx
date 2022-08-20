@@ -11,8 +11,6 @@ type TerminalTextProps = {
 };
 
 const TerminalText = ({children}: TerminalTextProps) => {
-    const textClass = 'text-lg text-blue-200';
-
     return (
         <div className="flex bg-gray-800 pl-4 pr-4 rounded" style={{font: 'caption'}}>
             <h2 className="text-lg text-indigo-400 pr-1">$</h2>

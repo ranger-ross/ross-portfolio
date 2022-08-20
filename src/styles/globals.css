@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background: black;
+}
+
 /*
  * The below is used for the fade in animation when scrolling
  */

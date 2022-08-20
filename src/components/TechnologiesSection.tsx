@@ -6,6 +6,7 @@ import javaLogo from "../../assets/logos/java-logo.jpg";
 import gcpLogo from "../../assets/logos/gcp-logo.png";
 import reactLogo from "../../assets/logos/react-logo.png";
 import angularLogo from "../../assets/logos/angular-logo.png";
+import React from "react";
 
 type Technology = {
     name: string,
@@ -53,7 +54,7 @@ const TechnologyLabel: React.FC<TechnologyLabelProps> = ({tech}) => {
                 </div>
             )}
 
-            <div className="inline-block text-gray-600 ">
+            <div className="inline-block text-gray-200 pl-2">
                 {tech.name}
             </div>
 
