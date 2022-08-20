@@ -92,9 +92,11 @@ const TechnologiesSection = () => {
             </div>
 
             <BasicCard growOnHover={false}>
-                {technologies.map(tech => (
-                    <TechnologyLabel key={tech.name} tech={tech}/>
-                ))}
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+                    {technologies.map(tech => (
+                        <TechnologyLabel key={tech.name} tech={tech}/>
+                    ))}
+                </div>
             </BasicCard>
 
         </div>

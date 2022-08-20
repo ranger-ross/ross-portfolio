@@ -15,7 +15,7 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <main>
+            <main className="overflow-hidden">
                 <div className="container mx-auto flex flex-col items-center justify-center text-center md:h-48">
                     <h1 className="
                     text-5xl md:text-[5rem] leading-normal font-extrabold
