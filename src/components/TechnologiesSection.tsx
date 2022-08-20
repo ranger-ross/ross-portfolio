@@ -1,12 +1,22 @@
 import Image, {StaticImageData} from "next/image";
 import BasicCard from "./basic/BasicCard";
+import React from "react";
 import springBootLogo from "../../assets/logos/springboot-logo.png";
 import kubernetesLogo from "../../assets/logos/kubernetes-logo.png";
 import javaLogo from "../../assets/logos/java-logo.jpg";
 import gcpLogo from "../../assets/logos/gcp-logo.png";
 import reactLogo from "../../assets/logos/react-logo.png";
 import angularLogo from "../../assets/logos/angular-logo.png";
-import React from "react";
+import gitlabCiLogo from "../../assets/logos/gitlab-logo.png";
+import jenkinsLogo from "../../assets/logos/jenkins-logo.png";
+import javascriptLogo from "../../assets/logos/javascript-logo.png";
+import bootstrapLogo from "../../assets/logos/bootstrap-logo.png";
+import materialUiLogo from "../../assets/logos/material-ui-logo.png";
+import postgresLogo from "../../assets/logos/postgres-logo.png";
+import nodeLogo from "../../assets/logos/node-logo.png";
+import oracleLogo from "../../assets/logos/oracle-logo.png";
+import gitlabActionsLogo from "../../assets/logos/github-actions-logo.png";
+import awsLogo from "../../assets/logos/aws-logo.png";
 
 type Technology = {
     name: string,
@@ -18,9 +28,19 @@ const technologies: Technology[] = [
     {name: 'Kubernetes', logo: kubernetesLogo, docs: 'https://kubernetes.io/'},
     {name: 'SpringBoot', logo: springBootLogo, docs: 'https://spring.io/'},
     {name: 'Google Cloud Platform', logo: gcpLogo, docs: 'https://cloud.google.com/'},
+    {name: 'AWS', logo: awsLogo, docs: 'https://aws.amazon.com/'},
     {name: 'Java', logo: javaLogo, docs: 'https://www.java.com/'},
     {name: 'React', logo: reactLogo, docs: 'https://reactjs.org/'},
     {name: 'Angular', logo: angularLogo, docs: 'https://angular.io/'},
+    {name: 'Gitlab CI', logo: gitlabCiLogo, docs: 'https://docs.gitlab.com/ee/ci/'},
+    {name: 'Github Actions', logo: gitlabActionsLogo, docs: 'https://github.com/features/actions'},
+    {name: 'Jenkins', logo: jenkinsLogo, docs: 'https://www.jenkins.io/'},
+    {name: 'Javascript', logo: javascriptLogo, docs: 'https://www.javascript.com/'},
+    {name: 'Bootstrap', logo: bootstrapLogo, docs: 'https://getbootstrap.com/'},
+    {name: 'Material UI', logo: materialUiLogo, docs: 'https://mui.com/'},
+    {name: 'NodeJS', logo: nodeLogo, docs: 'https://nodejs.org/en/about/'},
+    {name: 'Postgres', logo: postgresLogo, docs: 'https://www.postgresql.org/'},
+    {name: 'Oracle Database', logo: oracleLogo, docs: 'https://www.oracle.com/database/'},
 ];
 
 
@@ -44,6 +64,7 @@ const TechnologyLabel: React.FC<TechnologyLabelProps> = ({tech}) => {
                            height={logoSize}
                            width={logoSize}
                            layout={"fixed"}
+                           className="rounded"
                            objectFit={"contain"}
                            alt={"- "}
                     />
