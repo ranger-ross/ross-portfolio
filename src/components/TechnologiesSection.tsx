@@ -86,12 +86,13 @@ const TechnologyLabel: React.FC<TechnologyLabelProps> = ({tech}) => {
 const TechnologiesSection = () => {
     return (
         <div className="flex flex-col gap-3 p-4 w-full">
-            <div
-                className="font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-500 h-14">
-                Technologies <div className="inline-block text-black">🚀</div>
-            </div>
 
             <BasicCard growOnHover={false}>
+                <div
+                    className="font-extrabold text-transparent text-4xl sm:text-5xl bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400 h-14 w-fit mb-3">
+                    Technologies <div className="inline-block text-black">🚀</div>
+                </div>
+
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                     {technologies.map(tech => (
                         <TechnologyLabel key={tech.name} tech={tech}/>

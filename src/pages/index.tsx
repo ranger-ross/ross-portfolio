@@ -19,7 +19,7 @@ const Home: NextPage = () => {
                 <div className="container mx-auto flex flex-col items-center justify-center text-center md:h-48">
                     <h1 className="
                     text-5xl md:text-[5rem] leading-normal font-extrabold
-                    text-transparent text-8xl bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-500
+                    text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-500
                     "
                     >
                         Ross&apos;s Home Page
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
                 <LinksSection/>
 
-                <div className="m-10">
+                <div className="mt-10 sm:m-10">
                     <BasicCard>
                         <div className="flex flex-col items-center justify-center text-center">
                             <TerminalText>whoami</TerminalText>
