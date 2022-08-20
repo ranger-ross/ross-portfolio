@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                             <TerminalText>whoami</TerminalText>
 
                             <div className="w-10/12 text-white mt-3">
-                                I am a software engineer/architect currently
+                                Hey, my name is Ross Sullivan. I&apos;m a software engineer/architect currently
                                 living in <div className="inline-block">Tokyo, Japan 🇯🇵 </div><br/>
                                 I like designing computer systems, and apparently
                                 got good enough that companies pay me to do it. <br/>
