@@ -1,21 +1,32 @@
 import Image, {StaticImageData} from "next/image";
 import BasicCard from "./basic/BasicCard";
 import React from "react";
-import kubernetesLogo from "../../assets/logos/kubernetes-logo.png";
+import nihongoStats from "../../assets/projects/nihongo-stats.png";
+import githubLogo from "../../assets/logos/github-logo.png";
 
 type Project = {
     name: string,
-    image?: StaticImageData,
+    image: StaticImageData,
+    link: string,
     description: string,
-    repository: string
+    repository: string,
+    borderColors: {
+        start: string,
+        end: string
+    }
 };
 
 const projects: Project[] = [
     {
         name: 'Nihongo Stats',
-        image: kubernetesLogo,
-        description: 'https://kubernetes.io/',
-        repository: 'https://github.com/ranger-ross/nihongo-stats'
+        image: nihongoStats,
+        link: 'https://nihongostats.com/',
+        description: 'A stats visualization tools for Japanese language learning platforms.',
+        repository: 'https://github.com/ranger-ross/nihongo-stats',
+        borderColors: {
+            start: 'from-[#7928ca]',
+            end: 'to-[#ff0080]'
+        }
     },
 
 ];
@@ -27,8 +38,54 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
     return (
-        <div>
-            TODO: impl
+        <div className="relative flex h-fit min-h-[300px] max-w-[400px]">
+            <div
+                className={`rounded-xl w-full bg-gradient-to-br p-[2px] ${project.borderColors.start} ${project.borderColors.end}`}>
+                <div className="h-full bg-black rounded-lg p-4">
+
+                    <a href={project.link}
+                       target="_blank"
+                       rel="noreferrer"
+                    >
+                        <Image
+                            src={project.image}
+                            alt={project.name}
+                        />
+                    </a>
+
+
+                    <div className="flex justify-between items-center text-white mb-4">
+                        <a href={project.link}
+                           target="_blank"
+                           rel="noreferrer"
+                        >
+                            <h1 className="text-3xl font-extrabold">
+                                {project.name}
+                            </h1>
+                        </a>
+
+                        <a href={project.repository}
+                           target="_blank"
+                           rel="noreferrer"
+                        >
+                            <Image
+                                src={githubLogo}
+                                alt={'Repository'}
+                                style={{filter: 'invert(100%)'}}
+                                height={30}
+                                width={30}
+                            />
+                        </a>
+
+                    </div>
+
+                    <div className="flex w-full justify-between mb-4">
+                        <p className="text-lg mr-5 text-white flex items-center justify-center">
+                            {project.description}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
@@ -43,7 +100,7 @@ const ProjectsSection = () => {
                     Projects <div className="inline-block text-black">🎨</div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+                <div className="flex flex-wrap gap-2">
                     {projects.map(tech => (
                         <ProjectCard key={tech.name} project={tech}/>
                     ))}
