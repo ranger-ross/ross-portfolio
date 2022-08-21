@@ -2,6 +2,7 @@ import type {NextPage} from "next";
 import Head from "next/head";
 import BasicCard from "../components/basic/BasicCard";
 import TechnologiesSection from "../components/TechnologiesSection";
+import ProjectsSection from "../components/ProjectsSection";
 import LinksSection from "../components/LinksSection";
 import TerminalText from "../components/basic/TerminalText";
 import Particles from "../components/particles/Particles";
@@ -47,6 +48,8 @@ const Home: NextPage = () => {
 
 
                 <TechnologiesSection/>
+
+                <ProjectsSection/>
 
             </main>
 
