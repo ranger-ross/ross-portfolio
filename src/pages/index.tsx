@@ -38,8 +38,7 @@ const Home: NextPage = () => {
                             <div className="w-10/12 text-white mt-3">
                                 Hey, my name is Ross Sullivan. I&apos;m a software engineer/architect currently
                                 living in <div className="inline-block">Tokyo, Japan 🇯🇵 </div><br/>
-                                I like designing computer systems, and apparently
-                                got good enough that companies pay me to do it. <br/>
+                                I like designing computer systems, and sometimes companies pay me to do it. <br/>
                                 Here you can see what I&apos;m working on 👀
                             </div>
                         </div>
