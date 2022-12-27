@@ -20,7 +20,7 @@ const projects: Project[] = [
     {
         name: 'Nihongo Stats',
         image: nihongoStats,
-        link: 'https://nihongostats.com/',
+        link: '/projects/nihongo-stats',
         description: 'A stats visualization tools for Japanese language learning platforms.',
         repository: 'https://github.com/ranger-ross/nihongo-stats',
         borderColors: {
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                 <div className="h-full bg-black rounded-lg p-4">
 
                     <a href={project.link}
-                       target="_blank"
+                       target={!project.link.startsWith("/") ? "_blank" : undefined}
                        rel="noreferrer"
                     >
                         <Image
@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
 
                     <div className="flex justify-between items-center text-white mb-4">
                         <a href={project.link}
-                           target="_blank"
+                           target={!project.link.startsWith("/") ? "_blank" : undefined}
                            rel="noreferrer"
                         >
                             <h1 className="text-3xl font-extrabold">

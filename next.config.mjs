@@ -1,4 +1,4 @@
-import { env } from "./src/env/server.mjs";
+import {withContentlayer} from 'next-contentlayer'
 
 /**
  * Don't be scared of the generics here.
@@ -9,10 +9,10 @@ import { env } from "./src/env/server.mjs";
  * @constraint {{import('next').NextConfig}}
  */
 function defineNextConfig(config) {
-  return config;
+    return config;
 }
 
-export default defineNextConfig({
-  reactStrictMode: true,
-  swcMinify: true,
-});
+export default withContentlayer(defineNextConfig({
+    reactStrictMode: true,
+    swcMinify: true,
+}));
