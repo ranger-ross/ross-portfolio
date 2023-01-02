@@ -1,19 +1,7 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{js,ts,jsx,tsx}"],
-    theme: {
-        extend: {
-            animation: {
-                fadeIn: "fadeIn 2s ease-in forwards"
-            },
-            keyframes: {
-                fadeIn: {
-                    "0%": {opacity: 0},
-                    "100%": {opacity: 1}
-                }
-            }
-        },
-        animation: ["motion-safe"]
-    },
-    plugins: [],
-};
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,svg}"],
+	plugins: [require("@tailwindcss/typography")],
+  };
+  

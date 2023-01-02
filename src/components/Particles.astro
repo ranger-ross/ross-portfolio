@@ -1,0 +1,82 @@
+---
+function createArray(count: number): number[] {
+    const arr: number[] = [];
+
+    for (let i = 0; i < count; i++) {
+        arr.push(i);
+    }
+
+    return arr;
+}
+
+---
+
+{
+    createArray(30).map((num) => (
+        <div class="particle" />
+    ))
+}
+
+<style lang="scss">
+    @use "sass:math";
+
+    $total-particles: 30;
+
+    .particle {
+        position: absolute;
+        border-radius: 50%;
+        z-index: -100;
+        //transition: visibility 0s 2s, opacity 2s linear;
+    }
+
+    @for $i from 1 through $total-particles {
+        @keyframes particle-animation-#{$i} {
+            100% {
+                transform: translate3d(
+                    (random(90) * 1vw),
+                    (random(90) * 1vh),
+                    (random(100) * 1px)
+                );
+            }
+        }
+
+        $opacity: math.div(random(100), 100);
+        $animation-duration: 60s;
+
+        @keyframes particle-animation-opacity-#{$i} {
+            0% {
+                opacity: 0;
+            }
+            5% {
+                opacity: $opacity;
+            }
+            95% {
+                opacity: $opacity;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .particle:nth-child(#{$i}) {
+            animation: particle-animation-#{$i}
+                    $animation-duration
+                    linear
+                    infinite,
+                particle-animation-opacity-#{$i} $animation-duration infinite;
+            $size: random(5) + 2 + px;
+            opacity: $opacity;
+            height: $size;
+            width: $size;
+            animation-delay: -$i * 0.2s;
+            transform: translate3d(
+                (random(90) * 1vw),
+                (random(90) * 1vh),
+                (random(100) * 1px)
+            );
+            $color: hsl(random(360), 70%, 50%);
+            background: $color;
+            box-shadow: 0 0 20px 7px $color;
+        }
+    }
+</style>
