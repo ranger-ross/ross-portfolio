@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background: black;
+}
+
+/*
+ * The below is used for the fade in animation when scrolling
+ */
+section {
+    opacity: 0;
+    transform: translate(0, 50%);
+    visibility: hidden;
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+    will-change: opacity, visibility;
+}
+
+.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    display: flex;
+}
+

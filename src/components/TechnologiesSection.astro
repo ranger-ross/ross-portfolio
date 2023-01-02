@@ -1,0 +1,60 @@
+---
+import BasicCard from "./BasicCard.astro";
+
+import springBootLogo from "/logos/springboot-logo.png";
+import kubernetesLogo from "/logos/kubernetes-logo.png";
+import javaLogo from "/logos/java-logo.jpg";
+import gcpLogo from "/logos/gcp-logo.png";
+import reactLogo from "/logos/react-logo.png";
+import angularLogo from "/logos/angular-logo.png";
+import gitlabCiLogo from "/logos/gitlab-logo.png";
+import jenkinsLogo from "/logos/jenkins-logo.png";
+import javascriptLogo from "/logos/javascript-logo.png";
+import bootstrapLogo from "/logos/bootstrap-logo.png";
+import materialUiLogo from "/logos/material-ui-logo.png";
+import postgresLogo from "/logos/postgres-logo.png";
+import nodeLogo from "/logos/node-logo.png";
+import oracleLogo from "/logos/oracle-logo.png";
+import gitlabActionsLogo from "/logos/github-actions-logo.png";
+import awsLogo from "/logos/aws-logo.png";
+import TechnologyLabel from "./TechnologyLabel.astro";
+import type { Technology } from "../types/technology";
+
+const technologies: Technology[] = [
+    {name: 'Kubernetes', logo: kubernetesLogo, docs: 'https://kubernetes.io/'},
+    {name: 'SpringBoot', logo: springBootLogo, docs: 'https://spring.io/'},
+    {name: 'Google Cloud Platform', logo: gcpLogo, docs: 'https://cloud.google.com/'},
+    {name: 'AWS', logo: awsLogo, docs: 'https://aws.amazon.com/'},
+    {name: 'Java', logo: javaLogo, docs: 'https://www.java.com/'},
+    {name: 'React', logo: reactLogo, docs: 'https://reactjs.org/'},
+    {name: 'Angular', logo: angularLogo, docs: 'https://angular.io/'},
+    {name: 'Gitlab CI', logo: gitlabCiLogo, docs: 'https://docs.gitlab.com/ee/ci/'},
+    {name: 'Github Actions', logo: gitlabActionsLogo, docs: 'https://github.com/features/actions'},
+    {name: 'Jenkins', logo: jenkinsLogo, docs: 'https://www.jenkins.io/'},
+    {name: 'Javascript', logo: javascriptLogo, docs: 'https://www.javascript.com/'},
+    {name: 'Bootstrap', logo: bootstrapLogo, docs: 'https://getbootstrap.com/'},
+    {name: 'Material UI', logo: materialUiLogo, docs: 'https://mui.com/'},
+    {name: 'NodeJS', logo: nodeLogo, docs: 'https://nodejs.org/en/about/'},
+    {name: 'Postgres', logo: postgresLogo, docs: 'https://www.postgresql.org/'},
+    {name: 'Oracle Database', logo: oracleLogo, docs: 'https://www.oracle.com/database/'},
+];
+
+---
+
+<div class="flex flex-col gap-3 p-4 w-full">
+
+    <BasicCard growOnHover={false}>
+        <div
+            class="font-extrabold text-transparent text-4xl sm:text-5xl bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400 h-14 w-fit mb-3">
+            Technologies <div class="inline-block text-black">🚀</div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            {technologies.map(tech => (
+                <TechnologyLabel key={tech.name} tech={tech}/>
+            ))}
+        </div>
+    </BasicCard>
+
+</div>
+

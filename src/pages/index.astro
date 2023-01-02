@@ -1,0 +1,54 @@
+---
+import Header from "../components/Header.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import LinkSection from "../components/LinkSection.astro";
+import Particles from "../components/Particles.astro";
+import BasicCard from "../components/BasicCard.astro";
+import TerminalText from "../components/TerminalText.astro";
+import TechnologiesSection from "../components/TechnologiesSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<Header title={SITE_TITLE} description={SITE_DESCRIPTION} isIndex={true}/>
+	</head>
+	<body>
+		<main class="overflow-hidden">
+			<div
+				class="container mx-auto flex flex-col items-center justify-center text-center md:h-48"
+			>
+				<h1
+					class="text-5xl md:text-[5rem] leading-normal font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-500"
+				>
+					{SITE_TITLE}
+				</h1>
+			</div>
+
+			<Particles />
+
+			<LinkSection />
+
+			<div class="mt-10 sm:m-10">
+				<BasicCard growOnHover={false}>
+					<div class="flex flex-col items-center justify-center text-center">
+						<TerminalText>whoami</TerminalText>
+
+						<div class="w-10/12 text-white mt-3">
+							Hey, my name is Ross Sullivan. I&apos;m a software engineer/architect currently
+							living in <div class="inline-block">Tokyo, Japan 🇯🇵 </div><br/>
+							I like designing computer systems, and sometimes companies pay me to do it. <br/>
+							Here you can see what I&apos;m working on 👀
+						</div>
+					</div>
+				</BasicCard>
+			</div>
+
+			<TechnologiesSection />
+
+			<ProjectsSection />
+
+		</main>
+	</body>
+</html>
