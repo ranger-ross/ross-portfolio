@@ -3,12 +3,12 @@ import type { Project } from "../types/project";
 import BasicCard from "./BasicCard.astro";
 import ProjectCard from "./ProjectCard.astro";
 
-import nihongoStats from "/projects/nihongo-stats.png";
+import nihongoStats from "../../public/projects/nihongo-stats.png";
 
 const projects: Project[] = [
     {
         name: "Nihongo Stats",
-        image: nihongoStats,
+        image: nihongoStats.src,
         link: "/projects/nihongo-stats",
         description:
             "A stats visualization tools for Japanese language learning platforms.",
