@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../contentlayer.config.js"],
-  "sourcesContent": ["import {defineDocumentType, makeSource} from 'contentlayer/source-files'\n\nexport const Project = defineDocumentType(() => ({\n    name: 'Project',\n    filePathPattern: `**/*.md`,\n    fields: {\n        title: {\n            type: 'string',\n            description: 'The title of the post',\n            required: true,\n        },\n        date: {\n            type: 'date',\n            description: 'The date of the post',\n            required: true,\n        },\n    },\n    computedFields: {\n        url: {\n            type: 'string',\n            resolve: (post) => `/posts/${post._raw.flattenedPath}`,\n        },\n    },\n}))\n\nexport default makeSource({\n    contentDirPath: 'posts',\n    documentTypes: [Project],\n})\n"],
-  "mappings": ";AAAA,SAAQ,oBAAoB,kBAAiB;AAEtC,IAAM,UAAU,mBAAmB,OAAO;AAAA,EAC7C,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,QAAQ;AAAA,IACJ,OAAO;AAAA,MACH,MAAM;AAAA,MACN,aAAa;AAAA,MACb,UAAU;AAAA,IACd;AAAA,IACA,MAAM;AAAA,MACF,MAAM;AAAA,MACN,aAAa;AAAA,MACb,UAAU;AAAA,IACd;AAAA,EACJ;AAAA,EACA,gBAAgB;AAAA,IACZ,KAAK;AAAA,MACD,MAAM;AAAA,MACN,SAAS,CAAC,SAAS,UAAU,KAAK,KAAK;AAAA,IAC3C;AAAA,EACJ;AACJ,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACtB,gBAAgB;AAAA,EAChB,eAAe,CAAC,OAAO;AAC3B,CAAC;",
-  "names": []
-}
