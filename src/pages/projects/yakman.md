@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/ProjectPost.astro"
 title: "YakMan"
-description: "A stats visualization tool for Japanese language learning platforms."
+description: "TODO"
 date: "Nov 30 2023"
 repositoryLink: https://github.com/ranger-ross/yakman
 ---
