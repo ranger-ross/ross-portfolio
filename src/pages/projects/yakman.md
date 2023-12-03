@@ -5,8 +5,6 @@ description: "TODO"
 date: "Nov 30 2023"
 repositoryLink: https://github.com/ranger-ross/yakman
 ---
-<!-- Disable darkreader chrome extension: https://github.com/darkreader/darkreader/blob/main/CONTRIBUTING.md#disabling-dark-reader-on-your-site -->
-<meta name="darkreader-lock">
 
 # What and why
 
