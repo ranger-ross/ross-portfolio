@@ -31,11 +31,12 @@ This lead me to create YakMan.
 What I really wanted was a config manager that is:
 
 1. Language agnostic
-2. Bring your own storage. No vendor lock in and does not require a specific cloud
-3. Ability to hotswap config with application restarts
-4. Modular with the ability to extend if desired 
-5. Some basic access control
-6. Free and open source
+2. Support basic organziation/grouping featuers
+3. Bring your own storage. No vendor lock in and does not require a specific cloud
+4. Ability to hotswap config with application restarts
+5. Modular with the ability to extend if desired 
+6. Some basic access control
+7. Free and open source
 
 
 # Tech Stack
